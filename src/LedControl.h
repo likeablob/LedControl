@@ -27,7 +27,11 @@
 #ifndef LedControl_h
 #define LedControl_h
 
+#if defined(ESP8266) || defined(ESP32) || defined(ESP31B)
+#include <pgmspace.h>
+#else
 #include <avr/pgmspace.h>
+#endif
 
 #if (ARDUINO >= 100)
 #include <Arduino.h>
